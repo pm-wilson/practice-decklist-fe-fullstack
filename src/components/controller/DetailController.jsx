@@ -17,7 +17,11 @@ const DetailController = ({ match }) => {
 
   return (
     <div>
-      <Detail details={details}></Detail>
+      <Detail 
+        deck={details.deck}
+        colors={details.colors}
+        format={details.format}
+      ></Detail>
     </div>
   );
 };
@@ -26,7 +30,7 @@ DetailController.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
       id: PropTypes.string,
-    }).isRequired,
+    }),
   })
 };
 

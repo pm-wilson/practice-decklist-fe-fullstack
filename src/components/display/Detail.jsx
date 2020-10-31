@@ -21,7 +21,7 @@ const Detail = ({ deck, colors, format }) => {
   );
 };
 
-Detail.PropTypes = {
+Detail.propTypes = {
   deck: PropTypes.string,
   colors: PropTypes.string,
   format: PropTypes.string,
