@@ -12,15 +12,24 @@ export async function getDeckDetails(id) {
   return details;
 }
 
+export async function deleteDeck(id) {
+  const res = await fetch(`http://localhost:7890/decks/${id}`, {
+    method: 'DELETE',
+  });
+  const deletedDeck = await res.json();
+
+  return deletedDeck;
+}
+
 export async function updateDeckDetails(id, data) {
   const res = await fetch(`http://localhost:7890/decks/${id}`, {
     method: 'PUT',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(data),
   });
-  const newDeck = await res.json();
+  const updatedDeck = await res.json();
 
-  return newDeck;
+  return updatedDeck;
 }
 
 export async function addNewDeck(data) {

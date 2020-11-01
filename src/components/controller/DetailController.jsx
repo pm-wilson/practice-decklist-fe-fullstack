@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getDeckDetails, updateDeckDetails } from '../../services/getDecksApi';
+import { getDeckDetails, updateDeckDetails, deleteDeck } from '../../services/getDecksApi';
 import Detail from '../display/Detail';
 import PropTypes from 'prop-types';
 
@@ -12,6 +12,11 @@ const DetailController = ({ match }) => {
       .then(details => setDetails(details))
       .finally(() => setLoading(false));
   }, []);
+
+  const handleDelete = () => {
+    deleteDeck(match.params.id)
+      .then(() => window.location = '/');
+  };
 
   const handleChange = ({ target }) => {
     if(target.name === 'deck') setDetails({ deck: target.value, colors: details.colors, format: details.format });
@@ -40,6 +45,7 @@ const DetailController = ({ match }) => {
         format={details.format}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
+        handleDelete={handleDelete}
       ></Detail>
     </div>
   );

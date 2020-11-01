@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Detail = ({ deck, colors, format, handleChange, handleSubmit }) => {
+const Detail = ({ deck, colors, format, handleChange, handleSubmit, handleDelete }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -17,7 +17,7 @@ const Detail = ({ deck, colors, format, handleChange, handleSubmit }) => {
         </label>
         <button>Update</button>
       </form>
-      <button>Delete</button>
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 };
@@ -28,6 +28,7 @@ Detail.propTypes = {
   format: PropTypes.string,
   handleChange: PropTypes.func,
   handleSubmit: PropTypes.func,
+  handleDelete: PropTypes.func,
 };
 
 export default Detail;
