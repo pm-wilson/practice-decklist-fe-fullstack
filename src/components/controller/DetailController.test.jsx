@@ -10,20 +10,23 @@ describe('DetailController component', () => {
   it('display a deck after a load screen', () => {
     getDeckDetails.mockResolvedValue({
       id: 1,
-      deck: 'Deck 1',
+      deck: 'Deck',
       colors: 'G',
       format: 'Casual',
     });
     render(<MemoryRouter initialEntries={['/details/1']}>
-      <Route path="/character/:id" component={getDeckDetails} />
+      <Route path="/details/:id" component={DetailController} />
     </MemoryRouter>);
 
     screen.getByText('Loading...');
 
     return waitFor(() => {
-      screen.getByText('Deck 1');
-      screen.getByText('G');
-      screen.getByText('Casual');
+      screen.getByText('Deck:');
+      screen.getByDisplayValue('Deck');
+      screen.getByText('Colors:');
+      screen.getByDisplayValue('G');
+      screen.getByText('Format:');
+      screen.getByDisplayValue('Casual');
     });
   });
 });
