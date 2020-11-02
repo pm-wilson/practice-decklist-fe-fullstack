@@ -35,7 +35,7 @@ const DetailController = ({ match }) => {
       .then(() => window.location = '/');
   };
   
-  if(loading) return <h1 data-testid="listtestloading">Loading again...</h1>;
+  if(loading) return <h1>Loading...</h1>;
 
   return (
     <div>

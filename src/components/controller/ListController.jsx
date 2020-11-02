@@ -35,10 +35,10 @@ const ListController = () => {
       .finally(setLoading(false));
   };
 
-  if(loading) return <h1 data-testid="listtestloading">Loading...</h1>;
+  if(loading) return <h1>Loading...</h1>;
 
   return (
-    <div>
+    <div data-testid="deckslist">
       <List
         decks={decks}
         newDeckName={newDeckName}

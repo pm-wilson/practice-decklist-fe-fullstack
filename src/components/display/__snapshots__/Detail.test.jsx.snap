@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Detail component renders Detail 1`] = `
+<DocumentFragment>
+  <div>
+    <form>
+      <h2>
+        Deck Details
+      </h2>
+      <label>
+        Deck:
+        <input
+          name="deck"
+          value=""
+        />
+      </label>
+      <label>
+        Colors:
+        <input
+          name="colors"
+          value=""
+        />
+      </label>
+      <label>
+        Format:
+        <input
+          name="format"
+          value=""
+        />
+      </label>
+      <button>
+        Update
+      </button>
+    </form>
+    <button>
+      Delete
+    </button>
+  </div>
+</DocumentFragment>
+`;
