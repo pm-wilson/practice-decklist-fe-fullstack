@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List component renders List 1`] = `
+<DocumentFragment>
+  <div>
+    <form>
+      <h2>
+        New Deck
+      </h2>
+      <label>
+        Deck Name
+        <input
+          name="deck"
+          value=""
+        />
+      </label>
+      <label>
+        Colors
+        <input
+          name="colors"
+          value=""
+        />
+      </label>
+      <label>
+        Format
+        <input
+          name="format"
+          value=""
+        />
+      </label>
+      <button>
+        Add Deck
+      </button>
+    </form>
+    <div>
+      <h2>
+        Deck List
+      </h2>
+      <div>
+        <a
+          href="/details/1"
+        />
+      </div>
+      <div>
+        <a
+          href="/details/2"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
